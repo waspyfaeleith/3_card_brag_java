@@ -1,4 +1,4 @@
-//package card;
+package card_game;
 
 public class Card {
   Suit suit;
@@ -17,7 +17,7 @@ public class Card {
   public Value getValue() {
     return this.value;
   }
-  public void show() {
-    System.out.println(this.value.toString() + " OF " + this.suit.toString() + "S");
+  public String toString() {
+    return this.value.toString() + " OF " + this.suit.toString() + "S";
   }
 }

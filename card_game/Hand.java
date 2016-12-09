@@ -1,3 +1,4 @@
+package card_game;
 import java.util.*;
 
 public class Hand {
@@ -15,12 +16,11 @@ public class Hand {
 
   public void show() {
     for (Card card : this.cards) {
-      System.out.println(card.getValue().toString() + " OF " + card.getSuit().toString() + "S");
+      System.out.println(card.toString());
     }
     this.checkHand();
     System.out.println(handType);
-    System.out.print("High card is ");
-    highCard.show();
+    System.out.print("High card is " + highCard.toString());
   }
 
   private Card[] getCards() {
@@ -161,6 +161,10 @@ public class Hand {
       handType = HandType.PRIAL;
       return;
     }
+    if (isAStraightFlush(cards)) {
+      handType = HandType.STRAIGHTFLUSH;
+      return;
+    } 
     if (isFlush(cards)) {
       handType = HandType.FLUSH;
       return;
@@ -173,10 +177,10 @@ public class Hand {
       handType = HandType.STRAIGHT;
       return;
     }
-    if (isAStraightFlush(cards)) {
-      handType = HandType.STRAIGHTFLUSH;
-      return;
-    } 
     handType = HandType.HIGHHAND;
+  }
+
+  public HandType getHandType() {
+    return this.handType;
   }
 }

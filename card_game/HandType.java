@@ -1,3 +1,5 @@
+package card_game;
+
 public enum HandType {
   PRIAL,
   STRAIGHTFLUSH,

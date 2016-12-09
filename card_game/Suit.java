@@ -1,4 +1,4 @@
-//package card;
+package card_game;
 
 public enum Suit {
   SPADE,

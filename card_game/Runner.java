@@ -1,4 +1,4 @@
-import card_game.*;
+package card_game;
 
 public class Runner {
   public static void main(String[] args) {

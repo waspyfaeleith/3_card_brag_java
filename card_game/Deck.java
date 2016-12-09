@@ -1,4 +1,4 @@
-//package card;
+package card_game;
 import java.util.*;
 
 public class Deck {
@@ -21,12 +21,16 @@ public class Deck {
 
   public void printDeck() {
     for (Card card : cards) {
-      card.show();
+      System.out.print(card.toString());
     }
   }
 
   public ArrayList<Card> getDeck() {
     ArrayList<Card> tempDeck = new ArrayList<Card>(cards);
     return tempDeck;
+  }
+
+  public Card getCard() {
+    return cards.get(0)
   }
 }

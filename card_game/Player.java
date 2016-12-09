@@ -1,3 +1,5 @@
+package card_game;
+
 public class Player {
   String name;
   Hand hand;
@@ -15,6 +17,14 @@ public class Player {
     System.out.println("\n" + this.name + " has:");
     this.hand.show();
     System.out.println("");
+  }
+
+  public boolean hasStraightFlush() {
+    return hand.handType == HandType.STRAIGHTFLUSH;
+  }
+
+  public boolean hasPrial() {
+    return hand.handType == HandType.PRIAL;
   }
 
 

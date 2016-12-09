@@ -1,3 +1,5 @@
+package card_game;
+
 public class Dealer {
   Deck deck;
 
@@ -7,7 +9,7 @@ public class Dealer {
 
   public void dealCard(Player player)
   {
-    Card card = this.deck.cards.get(0);
+    Card card = this.deck.getCard();
     this.deck.cards.remove(0);
     player.takeCard(card);
   }
