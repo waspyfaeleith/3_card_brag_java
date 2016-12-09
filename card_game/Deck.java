@@ -31,6 +31,6 @@ public class Deck {
   }
 
   public Card getCard() {
-    return cards.get(0)
+    return cards.get(0);
   }
 }
